@@ -6,9 +6,9 @@
 
 <div align="center">
 
-# nonebot-plugin-llob-master
+# LLOneBot-Master
 
-_✨ LLOneBot-Master ✨_
+_✨ 在Windows上无🧠管理你的LLOB！ ✨_
 
 
 <a href="./LICENSE">
