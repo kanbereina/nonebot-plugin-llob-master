@@ -1,4 +1,7 @@
+import os
+
 from nonebot import require
+from nonebot.log import logger
 from nonebot.plugin import PluginMetadata
 
 from .config import Config
@@ -18,4 +21,9 @@ __plugin_meta__ = PluginMetadata(
 
 require("nonebot_plugin_apscheduler")
 
-from .__main__ import *  # noqa
+
+# 仅当系统为Windows时插件生效
+if os.name == "nt":
+    from .__main__ import *  # noqa
+else:
+    logger.warning("本插件仅能在Windows系统上使用, 已自动禁用插件!")
