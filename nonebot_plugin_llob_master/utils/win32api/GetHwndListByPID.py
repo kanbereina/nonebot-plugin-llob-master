@@ -1,5 +1,7 @@
 import ctypes
-from ctypes import wintypes
+import os
+if os.name == "nt":  # 必须为Windos系统
+    from ctypes import wintypes
 
 
 def get_hwnd_list_by_pid(pid: int):

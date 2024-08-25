@@ -1,4 +1,6 @@
-import winreg
+import os
+if os.name == "nt":  # 必须为Windos系统
+    import winreg
 from pathlib import Path
 
 from ...config import PluginConfig

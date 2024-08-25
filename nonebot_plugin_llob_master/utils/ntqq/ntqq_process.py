@@ -1,3 +1,4 @@
+import os
 import asyncio
 import subprocess
 from pathlib import Path
@@ -7,7 +8,8 @@ from time import time
 import psutil
 from nonebot.log import logger
 
-from ..win32api import *
+if os.name == "nt":  # 必须为Windos系统
+    from ..win32api import *
 from ...models import ProcessResult
 
 

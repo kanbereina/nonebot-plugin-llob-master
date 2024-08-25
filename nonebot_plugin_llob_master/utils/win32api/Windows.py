@@ -1,5 +1,7 @@
 import ctypes
-from ctypes.wintypes import HWND, BOOL, LPCWSTR, SHORT, INT
+import os
+if os.name == "nt":  # 必须为Windos系统
+    from ctypes.wintypes import HWND, BOOL, LPCWSTR, SHORT, INT
 
 # 加载 user32.dll
 user32 = ctypes.WinDLL('user32')
