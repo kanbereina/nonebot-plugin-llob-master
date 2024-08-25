@@ -145,3 +145,10 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 > **断连重启** 只适用于**登录过期**的情况（此情况仍旧**可以正常登录**）
 > 
 > 对于其他情况，**无法提供有效的解决方案** !
+
+## ♥鸣谢
+
+- [install_llob](https://github.com/super1207/install_llob)
+- [LLOneBot](https://github.com/LLOneBot/LLOneBot)
+- [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT)
+- [QQNTFileVerifyPatch](https://github.com/LiteLoaderQQNT/QQNTFileVerifyPatch)
