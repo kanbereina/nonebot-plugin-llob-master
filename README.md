@@ -134,7 +134,7 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 | 配置项 | 必填 | 类型 | 默认值 | 说明 |
 |:-----:|:----:|:----:|:----:|:----:|
 | LM_Enable_Auto_Restart | 否 | bool | **False** | 允许插件管理你的NTQQ进程, 并且Bot断连时自动重启NTQQ |
-| LM_Restart_Time | 否 | int | **True** |  在Bot断连的 {LM_Restart_Time} 秒后重启NTQQ |
+| LM_Restart_Time | 否 | int | **10** |  在Bot断连的 {LM_Restart_Time} 秒后重启NTQQ |
 
 > [!NOTE]
 > 允许“自动重启”会让插件自动管理NTQQ进程，<br>
