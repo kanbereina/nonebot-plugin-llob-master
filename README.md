@@ -8,7 +8,7 @@
 
 # nonebot-plugin-llob-master
 
-_✨ NoneBot 插件简单描述 ✨_
+_✨ LLOneBot-Master ✨_
 
 
 <a href="./LICENSE">
