@@ -12,7 +12,7 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-llob-master.svg" alt="license">
+    <img src="https://img.shields.io/github/license/kanbereina/nonebot-plugin-llob-master.svg" alt="license">
 </a>
 <a href="https://pypi.python.org/pypi/nonebot-plugin-llob-master">
     <img src="https://img.shields.io/pypi/v/nonebot-plugin-llob-master.svg" alt="pypi">
