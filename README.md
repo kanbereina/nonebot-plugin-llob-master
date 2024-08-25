@@ -27,6 +27,14 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 > [!NOTE]
 > 推荐在 **Windows10或更高版本** 或 **Windows Sever 2019或更高版本** 使用此插件。
 
+## 🎀支持功能
+
+- [x] 检查NTQQ更新
+- [x] 检查LLOB更新
+- [x] 自动安装LLOB
+- [x] 自动配置LLOB
+- [x] 断连重启NTQQ
+
 ## 📖 介绍
 
 本插件可帮助小白 **用Windows系统一键安装LLOneBot** 并 **对接NoneBot** ，
