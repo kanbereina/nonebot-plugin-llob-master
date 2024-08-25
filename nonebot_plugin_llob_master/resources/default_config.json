@@ -1,0 +1,27 @@
+{
+  "enableLLOB": true,
+  "ob11": {
+    "httpPort": 3000,
+    "httpHosts": [],
+    "httpSecret": "",
+    "wsPort": 3001,
+    "wsHosts": [],
+    "enableHttp": false,
+    "enableHttpPost": false,
+    "enableWs": false,
+    "enableWsReverse": true,
+    "messagePostFormat": "array",
+    "enableHttpHeart": false,
+    "enableQOAutoQuote": false
+  },
+  "heartInterval": 60000,
+  "token": "",
+  "enableLocalFile2Url": false,
+  "debug": false,
+  "log": false,
+  "reportSelfMessage": false,
+  "autoDeleteFile": false,
+  "autoDeleteFileSecond": 60,
+  "musicSignUrl": "",
+  "msgCacheExpire": 120
+}
