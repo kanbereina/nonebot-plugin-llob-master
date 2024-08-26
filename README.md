@@ -222,7 +222,7 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 > [!IMPORTANT]
 > 🤓☝️️此处假设我是一个小白
 
-①**作为一个小白，我在 nonebot2 项目的<kbd>.env</kbd>文件配置如下：**
+①**很久以前，有一个小白，他在 nonebot2 项目的<kbd>.env</kbd>文件配置如下：**
 
     # NoneBot的配置
     
@@ -244,15 +244,22 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 
 ②**配置完毕，小白启动了NoneBot！**
 
-![LLOneBot-Master运行图片示例](https://github.com/kanbereina/nonebot-plugin-llob-master/blob/master/doc/img/start_llob_master.png)
+![LLOneBot-Master运行-图片示例](https://github.com/kanbereina/nonebot-plugin-llob-master/blob/master/doc/img/start_llob_master.png)
 
 > [!NOTE]
 > 看！小白只是启动了NoneBot，其他事**压根不用做**！<br>
 > 剩下的事只是**动动手指，登录配置的账号**，就能**连接Bot**啦！
 
-③**小白为了断连重启，他打开了NTQQ的设置！**
+③**小白打开了NTQQ的设置，启用了这些选项！**
 
+![NTQQ配置-图片示例](https://github.com/kanbereina/nonebot-plugin-llob-master/blob/master/doc/img/ntqq_setting.png)
 
+> [!IMPORTANT]
+> 咦？小白**为什么要设置这些呢？** <br>
+> ！！！<br>
+> 原来，这样就可以让插件**更好管理NTQQ**，实现**自动登录、断连重启**啦！<br>
+
+④**小白的故事结束了，LLOneBot-Maste的表现如何呢？**
 
 ## 🎇鸣谢
 
