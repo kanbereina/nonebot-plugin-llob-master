@@ -250,6 +250,10 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 > 看！小白只是启动了NoneBot，其他事**压根不用做**！<br>
 > 剩下的事只是**动动手指，登录配置的账号**，就能**连接Bot**啦！
 
+③**小白为了断连重启，他打开了NTQQ的设置！**
+
+
+
 ## 🎇鸣谢
 
 - [install_llob](https://github.com/super1207/install_llob)
