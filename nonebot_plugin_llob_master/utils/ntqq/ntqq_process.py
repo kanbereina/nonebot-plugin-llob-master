@@ -9,7 +9,8 @@ import psutil
 from nonebot.log import logger
 
 if os.name == "nt":  # 必须为Windos系统
-    from ..win32api import *
+    from ctypes.wintypes import HWND
+    from ..win32api import win32process, win32gui, win32con
 from ...models import ProcessResult
 
 
@@ -17,7 +18,7 @@ class NTQQProcess:
     def __init__(self, ntqq_path: Path):
         self.path = ntqq_path
         self.process: Optional[psutil.Process] = None
-        self.hwnd_list: Optional[List] = None
+        self.hwnd_list: Optional[List[HWND]] = None
 
     def run(self) -> bool:
         """启动NTQQ"""
@@ -49,13 +50,13 @@ class NTQQProcess:
     @staticmethod
     def _find_window_by_class(pid: int, class_name: str) -> Optional[List[int]]:
         """以窗口类名寻找指定窗口句柄"""
-        windows = get_hwnd_list_by_pid(pid)
+        windows = win32process.GetHWNDListByPID(pid)
         hwnd_list = []
         for hwnd in windows:
-            if is_window(hwnd):  # 是窗口
-                if is_window_visible(hwnd):  # 窗口可见
-                    if is_window_enabled(hwnd):  # 窗口可交互
-                        if get_class_name(hwnd) == class_name:  # 窗口类名特定
+            if win32gui.IsWindow(hwnd):  # 是窗口
+                if win32gui.IsWindowVisible(hwnd):  # 窗口可见
+                    if win32gui.IsWindowEnabled(hwnd):  # 窗口可交互
+                        if win32gui.GetClassName(hwnd) == class_name:  # 窗口类名特定
                             hwnd_list.append(hwnd)
         return hwnd_list if len(hwnd_list) else None
 
@@ -69,7 +70,8 @@ class NTQQProcess:
                 )
                 if result is not None:
                     self.hwnd_list = result
-                    logger.success(f"成功获取NTQQ窗口句柄({result})")
+                    logger.debug(
+                        f"成功获取NTQQ窗口句柄(ID: {', '.join([str(i) for i in result])})")
                     return result
 
                 # 检查是否超时
@@ -92,15 +94,15 @@ class NTQQProcess:
                 try:
                     for hwnd in self.hwnd_list:
                         while True:
-                            if is_window_enabled(hwnd):  # 窗口激活
-                                show_window(hwnd, SW_MINIMIZE)  # 最小化
-                                show_window(hwnd, SW_HIDE)  # 最小化并隐藏任务栏
+                            if win32gui.IsWindowEnabled(hwnd):  # 窗口激活
+                                win32gui.ShowWindow(hwnd, win32con.SW_MINIMIZE)  # 最小化
+                                win32gui.ShowWindow(hwnd, win32con.SW_HIDE)  # 最小化并隐藏任务栏
                             else:
                                 logger.warning(f"窗口(ID: {hwnd})未激活, 可能是一个无效的窗口句柄!")
                                 raise ValueError
 
-                            if is_iconic(hwnd):  # 窗口完成最小化
-                                logger.success(f"已隐藏NTQQ窗口(ID: {hwnd})")
+                            if win32gui.IsIconic(hwnd):  # 窗口完成最小化
+                                logger.success(f"成功最小化窗口(ID: {hwnd})")
                                 break
 
                             # 检查是否超时
