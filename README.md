@@ -30,6 +30,9 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 > [!IMPORTANT]
 > 推荐在 **Windows10或更高版本** 或 **Windows Sever 2019或更高版本** 使用此插件。
 
+> [!NOTE]
+> 觉得好用的话，就**给个⭐Star**吧！
+
 ## 🎀功能
 
 - [x] 检查NTQQ更新
