@@ -247,7 +247,7 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 ![LLOneBot-Master运行图片示例](https://github.com/kanbereina/nonebot-plugin-llob-master/blob/master/doc/img/start_llob_master.png)
 
 > [!NOTE]
-> 看！小白只是启动了NoneBot，其他事压根不用做！<br>
+> 看！小白只是启动了NoneBot，其他事**压根不用做**！<br>
 > 剩下的事只是**动动手指，登录配置的账号**，就能**连接Bot**啦！
 
 ## 🎇鸣谢
