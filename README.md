@@ -53,11 +53,6 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 <br>
  以及 **自动管理NTQQ进程 (启动、断连重启)** 。
 
-> [!WARNING]
-> **断连重启** 只适用于**登录过期**的情况（此情况仍旧**可以正常登录**）
-> 
-> 对于其他情况，**无法提供有效的解决方案** !
-
 ## 💿 安装
 
 <details open>
@@ -111,12 +106,6 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 | LM_Enable_LookUp_Reg | 否 | bool | **False** | 允许从注册表查询NTQQ路径 |
 | LM_NTQQ_Update_Check | 否 | bool | **True** | 允许插件加载时, 检查NTQQ版本更新 (只进行提醒) |
 
-> [!NOTE]
-> 当插件检测不到配置中“NTQQ路径”时，<br>
-> 会根据配置中是否“允许查询注册表”，再次从注册表查询NTQQ路径。
-> 
-> （适用于默认安装NTQQ的情况）
-
 ### LLOB相关
 
 | 配置项 | 必填 | 类型 | 默认值 | 说明 |
@@ -126,12 +115,6 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 | LM_LLOB_Auto_Install | 否 | bool | **False** | 允许插件检测到LLOB有新版本时, 自动安装LLOB |
 | LM_LLOB_First_Auto_Setting_QQID | 否 | int | **None** | (可选)此处填QQ号, 当插件初次安装LLOB时, 自动为你填写一份初始LLOB配置，NTQQ启动并登录该QQ号时，可直接连接Bot |
 
-> [!NOTE]
-> 启用“检查LLOB更新”才能激活后面的功能(自动安装、配置)
->
-> 若你初次安装使用LLOB，可在“LM_LLOB_First_Auto_Setting_QQID”填上自己的账号,<br>
-> 在安装完成后，启动程序并登录该账号，预设配置会直接生效，连接上Bot。
-
 ### 断连重启相关
 
 | 配置项 | 必填 | 类型 | 默认值 | 说明 |
@@ -139,39 +122,102 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 | LM_Enable_Auto_Restart | 否 | bool | **False** | 允许插件管理你的NTQQ进程, 并且Bot断连时自动重启NTQQ |
 | LM_Restart_Time | 否 | int | **10** |  在Bot断连的 {LM_Restart_Time} 秒后重启NTQQ |
 
+## 🌷如何上手LLOneBot-Master？
+
+> [!IMPORTANT]
+> 此处已假设你**已经安装NoneBot2、FastAPI驱动器、OneBotV11适配器**，<br>
+> 如果上述未安装，请先参考[NoneBot2官方文档](https://nonebot.dev/docs/2.3.2/tutorial/application)进行安装!<br>
+> 此处一并假设你**已经安装成功本插件**！
+
+<br>
+<br>
+
+### Part.1 设置nonebot
+在 nonebot2 项目的<kbd>.env</kbd>文件中设置<kbd>监听IP</kbd>和<kbd>端口</kbd>，例如：
+  
+    HOST=0.0.0.0 # 配置 NoneBot 监听的 IP / 主机名
+    PORT=8080  # 配置 NoneBot 监听的端口
+
+<br>
+<br>
+
+### Part.2 设置LLOneBot-Master配置
+  
+请在 nonebot2 项目的<kbd>.env</kbd>文件中进行配置：
+<br>
+**（“⚠”代表必选，“👍”代表推荐选择）**
+
+<br>
+
+⚠**①配置你的NTQQ路径**
+<br>
+**方法一** (使用指定路径下的NTQQ)：
+
+    LM_NTQQ_Path="C:\Users\Administrator\Desktop\QQNT\QQ.exe"  # 此处替换成你的路径
+
+**方法二：** (使用系统默认安装的NTQQ)：
+
+    LM_Enable_LookUp_Reg=True  # 直接查询注册表获取NTQQ路径 (可不填，默认False)
+
 > [!NOTE]
-> 允许“自动重启”会让插件自动管理NTQQ进程，<br>
-> NTQQ、LLOB更新检查完之后，若允许“自动重启”，会自动启动NTQQ，
+> 当插件检测不到配置中“NTQQ路径”时，<br>
+> 会根据配置中是否“允许查询注册表”，再次从注册表查询NTQQ路径。
+> 
+> （查询注册表适用于用默认安装的NTQQ的情况）
+
+---
+
+**(可选) ②启动时检查NTQQ更新：**
+
+    LM_NTQQ_Update_Check=True  # 设置为'False'则关闭 (默认True)
+
+---
+
+👍**③启动时检查LLOB更新：**
+
+    LM_LLOB_Update_Check=True  # 设置为'False'则关闭 (默认True)
+
+> [!NOTE]
+> 启用“检查LLOB更新”才能激活后面的功能(自动安装、配置)
+>
+> 若你初次安装使用LLOB，可在“LM_LLOB_First_Auto_Setting_QQID”填上自己的账号,<br>
+> 在安装完成后，启动程序并登录该账号，预设配置会直接生效，连接上Bot。
+
+**(可选) ④检测到LLOB更新时，自动安装新版本：**
+
+    LM_LLOB_Auto_Install=True  # 设置为'False'则关闭 (可不填，默认False)
+
+👍**⑤(可选) 没有检测到LLOB时，自动安装LLOB：**
+
+    LM_LLOB_First_Auto_Install=True  # 设置为'False'则关闭 (可不填，默认True)
+
+👍**⑥(可选) 没有检测到LLOB时，自动安装LLOB后，自动生成LLOB配置（登录该账号即可直接连接Bot）：**
+
+    LM_LLOB_First_Auto_Setting_QQID=<要登录的账号>  # 填整数，直接替换“<要登录的账号>”的字符 (可不填，默认None)
+
+---
+
+👍**⑦自动管理NTQQ进程，并在Bot断连时重启进程：**
+
+    LM_Enable_Auto_Restart=True  # 设置为'False'则关闭 (可不填，默认False)
+
+> [!NOTE]
+> NTQQ、LLOB更新检查完之后，若允许“自动管理NTQQ进程”，会自动启动NTQQ，
 > 若Bot断连，则会自动重启NTQQ。
 
 > [!WARNING]
 > **断连重启** 只适用于**登录过期**的情况（此情况仍旧**可以正常登录**）
 > 
-> 对于其他情况，**无法提供有效的解决方案** !
+> 对于其他情况（包括不限于**账号封禁**），**无法提供有效的解决方案** !
 
-## 🌷使用
-<details open>
-<summary><h3>Part.1 设置nonebot</h3></summary>
-在 nonebot2 项目的<kbd>.env</kbd>文件中设置<kbd>监听IP</kbd>和<kbd>端口</kbd>，例如：
-  
-    HOST=0.0.0.0 # 配置 NoneBot 监听的 IP / 主机名
-    PORT=8080  # 配置 NoneBot 监听的端口
-    
-</details>
+**(可选) ⑧断连时经过多少秒重启NTQQ：**
 
-<details open>
-<summary><h3>Part.2 设置LLOneBot-Master配置</h3></summary>
-<b>①配置你的NTQQ路径</b>
+    LM_Restart_Time=10  # (可不填，默认10秒)
+
 <br>
-<b>方法一</b> (使用指定目路径下的NTQQ)：
+<br>
 
-    LM_NTQQ_Path="C:\Users\Administrator\Desktop\QQNT\QQ.exe"  # 此处替换成你的路径
-
-<b>方法二：</b> (使用系统默认安装的NTQQ)：
-
-    LM_Enable_LookUp_Reg=True  # 直接查询注册表获取NTQQ路径
-
-</details>
+### Part.3 启动，实战！
 
 
 ## 🎇鸣谢
