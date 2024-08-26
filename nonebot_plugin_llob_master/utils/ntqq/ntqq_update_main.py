@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import Dict, NewType
+from typing import Dict
 
 from nonebot.log import logger
 
@@ -8,9 +8,6 @@ from .ntqq import NTQQ
 from .ntqq_path import NTQQPath
 from ...config import PluginConfig
 from ...models import NTQQVersion
-
-
-NTQQ_Path = NewType("NTQQPath", Path)
 
 
 class NTQQUpdater:
@@ -77,7 +74,7 @@ class NTQQUpdater:
             raise RuntimeError(f"NTQQ位数获取失败: {e.__class__.__name__}{e.args}")
 
 
-async def ntqq_update_checker() -> NTQQ_Path:
+async def ntqq_update_checker() -> Path:
     """NTQQ更新检查"""
     # 本地检查
     ntqq_path = NTQQUpdater.get_path()
@@ -107,9 +104,9 @@ async def ntqq_update_checker() -> NTQQ_Path:
         except Exception as e:
             logger.error(f"检查NTQQ版本更新失败: {e.__class__.__name__}{e.args}")
     else:
-        logger.warning("已关闭NTQQ更新检查, 跳过该流程")
+        logger.warning("已关闭'NTQQ更新检查', 跳过该流程")
 
-    return NTQQ_Path(ntqq_path)
+    return ntqq_path
 
 
 __all__ = ["ntqq_update_checker", "NTQQUpdater"]

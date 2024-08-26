@@ -10,20 +10,16 @@ from .utils import (
     get_ntqq_proc, ntqq_restart
 )
 
-logger.warning("请不要在任何影响力较大的简中互联网平台, 发布和讨论任何与LLOB、本插件存在相关性的信息!")
 
-# 检查NTQQ版本更新
-NTQQ_Path = asyncio.run(
-    ntqq_update_checker()
-)
-
-# 检查LLOB版本更新
-asyncio.run(
-    llob_update_checker()
-)
-
-# 检查是否可启动NTQQ进程
-ntqq_start_checker(NTQQ_Path)
+@Driver.on_startup
+async def start():
+    logger.warning("请不要在任何影响力较大的简中互联网平台, 发布和讨论任何与LLOB、本插件存在相关性的信息!")
+    # 检查NTQQ版本更新
+    ntqq_path = await ntqq_update_checker()
+    # 检查LLOB版本更新
+    await llob_update_checker()
+    # 检查是否可启动NTQQ进程
+    ntqq_start_checker(ntqq_path=ntqq_path)
 
 
 @Driver.on_bot_connect
@@ -32,9 +28,12 @@ async def handle_window():
     # Bot连接时最小化NTQQ窗口
     if ntqq_proc is not None:
         await ntqq_proc.get_ntqq_hwnd()
-        logger.info("即将进行窗口最小化任务...")
-        await asyncio.sleep(5)  # 防止连接过快窗口未加载完的假最小化
-        logger.info("尝试最小化窗口...")
+
+        hide_time = 5
+        logger.info(f"将在 {hide_time} 秒后最小化NTQQ窗口...")
+        await asyncio.sleep(hide_time)  # 防止连接过快窗口未加载完的假最小化
+
+        logger.debug("尝试最小化窗口...")
         await ntqq_proc.hide_window()
 
 

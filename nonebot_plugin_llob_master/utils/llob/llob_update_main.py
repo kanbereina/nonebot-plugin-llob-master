@@ -39,7 +39,7 @@ async def llob_update_checker():
             # 检查是否允许检查LLOB版本更新
             if PluginConfig.lm_llob_update_check:
                 # 联网检查
-                logger.info("正在检查LLOB版本更新...")
+                logger.debug("正在检查LLOB版本更新...")
                 try:
                     latest_version = await LLOB.get_latest_version(
                         api_url="https://api.github.com/repos/LLOneBot/LLOneBot/releases/latest"
