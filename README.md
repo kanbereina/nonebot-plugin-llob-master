@@ -149,6 +149,31 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 > 
 > 对于其他情况，**无法提供有效的解决方案** !
 
+## 🌷使用
+<details open>
+<summary><h3>Part.1 设置nonebot</h3></summary>
+在 nonebot2 项目的<kbd>.env</kbd>文件中设置<kbd>监听IP</kbd>和<kbd>端口</kbd>，例如：
+  
+    HOST=0.0.0.0 # 配置 NoneBot 监听的 IP / 主机名
+    PORT=8080  # 配置 NoneBot 监听的端口
+    
+</details>
+
+<details open>
+<summary><h3>Part.2 设置LLOneBot-Master配置</h3></summary>
+<b>①配置你的NTQQ路径</b>
+<br>
+<b>方法一</b> (使用指定目路径下的NTQQ)：
+
+    LM_NTQQ_Path="C:\Users\Administrator\Desktop\QQNT\QQ.exe"  # 此处替换成你的路径
+
+<b>方法二：</b> (使用系统默认安装的NTQQ)：
+
+    LM_Enable_LookUp_Reg=True  # 直接查询注册表获取NTQQ路径
+
+</details>
+
+
 ## 🎇鸣谢
 
 - [install_llob](https://github.com/super1207/install_llob)
