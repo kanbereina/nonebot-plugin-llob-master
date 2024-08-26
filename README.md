@@ -259,7 +259,13 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 > ！！！<br>
 > 原来，这样就可以让插件**更好管理NTQQ**，实现**自动登录、断连重启**啦！<br>
 
-④**小白的故事结束了，你觉得LLOneBot-Master的表现如何呢？**
+④**小白不信邪，非要测试下断连重启！**
+
+![断连重启-图片示例](https://github.com/kanbereina/nonebot-plugin-llob-master/blob/master/doc/img/ntqq_disconnect.png)
+
+<br>
+
+⑤**小白的故事结束了，你觉得LLOneBot-Master的表现如何呢？**
 
 <br>
 
