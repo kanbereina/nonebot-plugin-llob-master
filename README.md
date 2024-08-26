@@ -219,6 +219,30 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 
 ### Part.3 启动，实战！
 
+> [!IMPORTANT]
+> 🤓☝️️此处假设我是一个小白
+
+①**作为一个小白，我在 nonebot2 项目的<kbd>.env</kbd>文件配置如下：**
+
+    # NoneBot的配置
+    
+    DRIVER=~fastapi
+    HOST=0.0.0.0  # 配置 NoneBot 监听的 IP / 主机名
+    PORT=8080  # 配置 NoneBot 监听的端口
+    COMMAND_START=["/", ""]  # 配置命令起始字符
+    COMMAND_SEP=[" "]  # 配置命令分割字符
+    SUPERUSERS=["114514"]  # 小白的账号
+
+    
+    # LLOneBot-Master的配置
+    
+    LM_NTQQ_Path = "C:\Users\Administrator\Desktop\QQNT\QQ.exe"
+    LM_LLOB_Auto_Install = True
+    LM_LLOB_First_Auto_Install=True
+    LM_LLOB_First_Auto_Setting_QQID = 114514  # 小白的账号
+    LM_Enable_Auto_Restart=True
+
+②**配置完毕，小白启动了NoneBot！**
 
 ## 🎇鸣谢
 
