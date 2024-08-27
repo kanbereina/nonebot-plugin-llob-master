@@ -56,10 +56,7 @@ class NTQQ:
             latest: NTQQVersion
     ) -> bool:
         """检测NTQQ是否有更新"""
-        if (now.main + now.build) != (latest.main + latest.build):
-            return True
-
-        return False
+        return (now.main + now.build) != (latest.main + latest.build)
 
 
 __all__ = ["NTQQ"]
