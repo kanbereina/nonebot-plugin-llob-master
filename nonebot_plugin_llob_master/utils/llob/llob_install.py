@@ -250,7 +250,6 @@ async def llob_auto_install() -> Optional[LLOB_DataPath]:
                 llob_data_path = LLOBInstaller.install_llob(
                     zip_data=llob_zip, llqqnt_path=llqqnt_path
                 )
-                logger.success("LLOB安装完成")
 
     except Exception as e:
         logger.error(f"安装LLOB失败: {e.__class__.__name__}{e.args}")

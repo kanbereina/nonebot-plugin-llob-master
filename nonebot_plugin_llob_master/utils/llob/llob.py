@@ -42,10 +42,7 @@ class LLOB:
             latest_version: LLOB_Version
     ) -> bool:
         """检测LLOB是否有更新"""
-        if now_version != latest_version:
-            return True
-
-        return False
+        return now_version != latest_version
 
 
 __all__ = ["LLOB"]
