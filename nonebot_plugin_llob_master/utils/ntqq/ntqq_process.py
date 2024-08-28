@@ -114,6 +114,11 @@ class NTQQProcess:
                     else:
                         break
                 except ValueError:
+                    # 检查是否超时
+                    end_time = time()
+                    if (end_time - start_time) > max_time:
+                        raise TimeoutError("已达到最大重试时间!")
+
                     # 重置窗口句柄
                     await self.get_ntqq_hwnd()
 
