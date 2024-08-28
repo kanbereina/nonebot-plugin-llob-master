@@ -17,7 +17,7 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 <a href="https://pypi.python.org/pypi/nonebot-plugin-llob-master">
     <img src="https://img.shields.io/pypi/v/nonebot-plugin-llob-master.svg" alt="pypi">
 </a>
-<img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
+<img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="python">
 
 </div>
 
@@ -28,7 +28,8 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 > 仅 **Windows系统** 可使用本插件！！！
 
 > [!IMPORTANT]
-> 推荐在 **Windows10或更高版本** 或 **Windows Sever 2019或更高版本** 使用此插件。
+> 推荐在 **Windows10或更高版本** 或 **Windows Sever 2019或更高版本** 使用此插件。<br>
+> 推荐使用 **Python3.11+** 运行此插件！（此版本比Python3.10性能平均**提升15%**，想更新Python版本的话是个不错的选择！）
 
 > [!NOTE]
 > 觉得好用的话，就**给个⭐Star**吧！
