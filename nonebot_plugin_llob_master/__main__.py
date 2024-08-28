@@ -131,6 +131,7 @@ async def install_latest_llob():
         # 等待重连
         await wait_for_bot_connect()
         msg = "更新已完成，Bot已重启。" if result else "更新失败，但Bot正常重启。"
+        await asyncio.sleep(3)  # 防止消息可能发不出去
         await update_llob.finish(msg)
 
     else:

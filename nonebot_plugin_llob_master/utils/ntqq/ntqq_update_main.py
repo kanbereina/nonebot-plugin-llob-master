@@ -22,7 +22,7 @@ class NTQQUpdater:
         except RuntimeError as e:
             logger.warning(e)
 
-            logger.debug("正在尝试从注册表获取NTQQ路径...")
+            logger.info("正在尝试从注册表获取NTQQ路径...")
             try:  # 再尝试注册表获取
                 return NTQQPath.get_path_by_reg()
             except RuntimeError as e:
