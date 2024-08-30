@@ -161,7 +161,7 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 
 > [!IMPORTANT]
 > 此处已假设你**已经安装NoneBot2、FastAPI驱动器、OneBotV11适配器**，<br>
-> 如果上述未安装，请先参考[NoneBot2官方文档](https://nonebot.dev/docs/2.3.2/tutorial/application)进行安装!<br>
+> 如果上述未安装，请先参考[NoneBot2官方文档](https://nonebot.dev/docs/2.3.2/quick-start)进行安装!<br>
 > 此处一并假设你**已经安装成功本插件**！
 
 <br>
