@@ -29,9 +29,6 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 
 > [!IMPORTANT]
 > 推荐在 **Windows10或更高版本** 或 **Windows Sever 2019或更高版本** 使用此插件。<br>
-> 
-> 推荐使用 **Python3.11或更高版本** 运行此插件！<br>
-（此版本比Python3.10性能平均**提升10-60%**，想更新Python版本的话是个不错的选择！）
 
 > [!NOTE]
 > 觉得好用的话，就**给个⭐Star**吧！
@@ -272,10 +269,10 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
     # LLOneBot-Master的配置
     
     LM_NTQQ_Path = "C:\Users\Administrator\Desktop\QQNT\QQ.exe"
-    LM_LLOB_Auto_Install = True
-    LM_LLOB_First_Auto_Install=True
-    LM_LLOB_First_Auto_Setting_QQID = 114514  # 小白的账号
-    LM_Enable_Auto_Restart=True
+    LM_LLOB_Auto_Install = True  # 允许启动时自动安装新版本LLOB
+    LM_LLOB_First_Auto_Install=True  # 没检测到安装LLOB时，自动安装
+    LM_LLOB_First_Auto_Setting_QQID = 114514  # 小白的账号，填写后初次安装后，自动生成LLOB账号配置
+    LM_Enable_Auto_Restart=True  # 允许管理NTQQ进程，断连重启
 
 ②**配置完毕，小白启动了NoneBot！**
 
