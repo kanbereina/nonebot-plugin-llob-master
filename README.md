@@ -170,6 +170,10 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
     HOST=0.0.0.0 # 配置 NoneBot 监听的 IP / 主机名
     PORT=8080  # 配置 NoneBot 监听的端口
 
+> [!NOTE]
+> 当使用**第一次安装LLOB并自动配置LLOB**时，
+> 会使用端口号自动**生成反向WS地址**以连接Bot
+
 <br>
 <br>
 
@@ -261,8 +265,8 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
     DRIVER=~fastapi
     HOST=0.0.0.0  # 配置 NoneBot 监听的 IP / 主机名
     PORT=8080  # 配置 NoneBot 监听的端口
-    COMMAND_START=["/", ""]  # 配置命令起始字符
-    COMMAND_SEP=[" "]  # 配置命令分割字符
+    COMMAND_START=["/", ""]  # 配置命令起始字符（一般配置成这样比较好）
+    COMMAND_SEP=[" "]  # 配置命令分割字符（一般采用空格分割命令参数）
     SUPERUSERS=["1919810"]  # 小白的账号，用于管理机器人
 
     
@@ -270,9 +274,9 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
     
     LM_NTQQ_Path = "C:\Users\Administrator\Desktop\QQNT\QQ.exe"
     LM_LLOB_Auto_Install = True  # 允许启动时自动安装新版本LLOB
-    LM_LLOB_First_Auto_Install=True  # 没检测到安装LLOB时，自动安装
+    LM_LLOB_First_Auto_Install = True  # 没检测到安装LLOB时，自动安装
     LM_LLOB_First_Auto_Setting_QQID = 114514  # 小白的 机器人 账号，填写后初次安装后，自动生成LLOB账号配置
-    LM_Enable_Auto_Restart=True  # 允许管理NTQQ进程，断连重启
+    LM_Enable_Auto_Restart = True  # 允许管理NTQQ进程，断连重启
 
 ②**配置完毕，小白启动了NoneBot！**
 
