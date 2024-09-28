@@ -1,0 +1,63 @@
+name: Bug 反馈
+title: "Bug: 出现异常"
+description: 提交 Bug 反馈以帮助 LLOB-Master 改进代码
+labels: ["bug"]
+body:
+  - type: input
+    id: env-os-version
+    attributes:
+      label: Windows 版本
+      description: 填写运行 LLOB-Master 的 Windows 版本
+      placeholder: 例：Windows Server 2019
+    validations:
+      required: true
+
+  - type: input
+    id: env-python-ver
+    attributes:
+      label: Python 版本
+      description: 填写运行 LLOB-Master 的 Python 版本
+      placeholder: 例：3.11.5
+    validations:
+      required: true
+
+  - type: input
+    id: env-lm-ver
+    attributes:
+      label: LLOB-Master 版本
+      description: 填写 LLOB-Master 版本
+      placeholder: 例：v1.1.1
+    validations:
+      required: true
+
+  - type: textarea
+    id: describe
+    attributes:
+      label: 描述问题
+      description: 清晰简洁地说明问题是什么
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 提供能复现此问题的详细操作步骤
+      placeholder: |
+        1. 首先……
+        2. 然后……
+        3. 发生……
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望的结果
+      description: 清晰简洁地描述你期望发生的事情
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 截图或日志
+      description: 提供有助于诊断问题的任何日志和截图
