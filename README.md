@@ -22,8 +22,8 @@ _✨ 在Windows上无🧠管理你的LLOB！ ✨_
 </div>
 
 > [!CAUTION]\
-> **警告，目前此插件只能用于9.9.15版本以下的NTQQ，新版本的NTQQ无法使用，<br>
-> 由于开发者精力有限，基本不会进行更新维护，新版本推荐使用 [install_llob](https://github.com/super1207/install_llob) 进行安装！**
+> **警告，目前此插件只能用于9.9.15版本以下的NTQQ，新版本的NTQQ禁止使用本插件，否则会因路径异常无法运行！<br>
+> 由于开发者精力有限，暂时不会进行新版本QQ的适配，新版本请自行使用 [install_llob](https://github.com/super1207/install_llob) 进行安装！**
 
 > [!CAUTION]\
 > **请不要在任何影响力较大的简中互联网平台（包括但不限于哔哩哔哩、抖音），发布和讨论*任何*与LLOB、本插件存在相关性的信息！**
